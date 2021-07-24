@@ -1,0 +1,143 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-24T06:42:58.513Z",
+        "before": [
+          {
+            "result": {
+              "duration": 879089826,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseClass.setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify that user is able to create the new account using cucumber datatable",
+        "description": "",
+        "id": "fb-signup-feature-to-validate-the-add-new-user-functionality;verify-that-user-is-able-to-create-the-new-account-using-cucumber-datatable",
+        "after": [
+          {
+            "result": {
+              "duration": 67995579,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseClass.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 687705992,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User has launched the FB application",
+            "match": {
+              "location": "FbSignUpSteps.user_has_launched_the_fb_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 60910642,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User clicks on the Create New Account Link",
+            "match": {
+              "location": "FbSignUpSteps.user_clicks_on_the_create_new_account_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 676230039,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User creates the new account",
+            "match": {
+              "location": "FbSignUpSteps.user_creates_the_new_account(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Field",
+                  "Value"
+                ]
+              },
+              {
+                "cells": [
+                  "FirstName",
+                  "Raj"
+                ]
+              },
+              {
+                "cells": [
+                  "LastName",
+                  "Sharma"
+                ]
+              },
+              {
+                "cells": [
+                  "MobileNum",
+                  "9999999999"
+                ]
+              },
+              {
+                "cells": [
+                  "Password",
+                  "abc@abc123"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 360271,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User click on the SignUp button",
+            "match": {
+              "location": "FbSignUpSteps.user_click_on_the_signup_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 399322,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user should be able to see the success message",
+            "match": {
+              "location": "FbSignUpSteps.user_should_be_able_to_see_the_success_message()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DataTable"
+          }
+        ]
+      }
+    ],
+    "name": "Fb SignUp Feature to validate the add new user functionality",
+    "description": "",
+    "id": "fb-signup-feature-to-validate-the-add-new-user-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/FbSignUp.feature",
+    "tags": []
+  }
+]

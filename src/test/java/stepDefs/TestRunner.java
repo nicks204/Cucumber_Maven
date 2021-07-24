@@ -10,9 +10,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		
 		monochrome=true,
-		plugin= {"pretty","html:target/cucumber-html"},
+		plugin= {"pretty","html:target/cucumber-html","json:target/cucumber.json"},
 		features = "src/test/java/features",
-		tags= {"@FbSignUp"},
+		tags= {"@DataTable"},
 		glue= {"stepDefs"}
 		
 		)

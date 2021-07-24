@@ -4,76 +4,13 @@ formatter.feature({
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "Verify that user is able to create the new Account",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@FbSignUp"
-    }
-  ]
-});
-formatter.step({
-  "name": "User has launched the FB application",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "User clicks on the Create New Account Link",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "User enters \"\u003cFirstName\u003e\" \"\u003cLastName\u003e\" \"\u003cMobileNum\u003e\" and \"\u003cPassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "User selects \"\u003cMonth\u003e\" \"\u003cDate\u003e\" and \"\u003cYear\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "User click on the SignUp button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user should be able to see the success message",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "FirstName",
-        "LastName",
-        "MobileNum",
-        "Password",
-        "Month",
-        "Date",
-        "Year"
-      ]
-    },
-    {
-      "cells": [
-        "Raj",
-        "Sharma",
-        "9999999999",
-        "abc123@abc",
-        "8",
-        "12",
-        "1990"
-      ]
-    }
-  ]
-});
 formatter.scenario({
-  "name": "Verify that user is able to create the new Account",
+  "name": "Verify that user is able to create the new account using cucumber datatable",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@FbSignUp"
+      "name": "@DataTable"
     }
   ]
 });
@@ -101,21 +38,43 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User enters \"Raj\" \"Sharma\" \"9999999999\" and \"abc123@abc\"",
+  "name": "User creates the new account",
+  "rows": [
+    {
+      "cells": [
+        "Field",
+        "Value"
+      ]
+    },
+    {
+      "cells": [
+        "FirstName",
+        "Raj"
+      ]
+    },
+    {
+      "cells": [
+        "LastName",
+        "Sharma"
+      ]
+    },
+    {
+      "cells": [
+        "MobileNum",
+        "9999999999"
+      ]
+    },
+    {
+      "cells": [
+        "Password",
+        "abc@abc123"
+      ]
+    }
+  ],
   "keyword": "And "
 });
 formatter.match({
-  "location": "FbSignUpSteps.user_enters_something_something_something_and_something(String,String,String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User selects \"8\" \"12\" and \"1990\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "FbSignUpSteps.user_selects_something_something_and_something(String,String,String)"
+  "location": "FbSignUpSteps.user_creates_the_new_account(DataTable)"
 });
 formatter.result({
   "status": "passed"
